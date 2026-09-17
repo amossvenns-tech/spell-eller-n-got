@@ -8,44 +8,45 @@ bool återstartbool = false;
 
 void bullet1()
 {
-    bool blank = false;
+    blank = false;
     Console.WriteLine("panng");
 }
 
 void bullet2()
-{ 
-    
+{
+    Console.WriteLine("CLICK");
 }
-
+/*
 void bullet3()
 { 
-    
+    Console.WriteLine("CLICK");
 }
 
 void bullet4()
 {
-
+    Console.WriteLine("AAAAHHHHHHHHH CLICK");
 }
 
 void bullet5()
 { 
-
+    Console.WriteLine("CLICK");
 }
 
 void bullet6()
 { 
-    
+    Console.WriteLine("CLICK");
 }
 
 void bullet7()
 { 
-    
+    Console.WriteLine("CLICK");
 }
 
 void bullet8()
-{ 
-    
+{
+    Console.WriteLine("CLICK");
 }
+*/
 void återstart()
 {
     Console.Clear();
@@ -64,21 +65,19 @@ while (true)
 
     List<Action> funktioner = new List<Action>()
     {
-        bullet1,
-        bullet2,
-        bullet3,
-        bullet4,
-        bullet5,
-        bullet6,
-        bullet7,
-        bullet8,
+        bullet1
     };
+
+    for (int i = 0; i < 7; i++)
+    {
+        funktioner.Add(bullet2);
+    }
     Random slump = new Random();
     int index = slump.Next(funktioner.Count);
 
     funktioner[index]();
 
-    if (dintur == true && blank == true)
+    if (dintur == true && blank == false)
     {
         Console.WriteLine("du klämmer avtryckaren i med hög puls och hör ett klick");
         dintur = false;
@@ -99,9 +98,12 @@ while (true)
         Console.WriteLine("du hör ett högt pang och så ser du din fiende falla framot och så börjar du långsamt stiga uppot och då inser du att du van mot djävulen i rysk rolet");
         återstart();
     }
-    string återstartstring = Console.ReadLine;
+       string återstartstring = Console.ReadLine;
+    
 
-    if (återstartbool == true && )
-    { }
+    if (återstartbool == true && återstartstring == "r")
+    {
+
+    }
 
 }
